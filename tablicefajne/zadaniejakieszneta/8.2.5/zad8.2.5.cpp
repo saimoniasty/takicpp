@@ -12,12 +12,10 @@ int main(){
     for(int i=0;i<n;i++){
         if(max<liczba[i]) max=liczba[i];
     }
+    if(max==liczba[0]) max2=liczba[1];
     for(int i=0;i<n;i++){
-        if(liczba[0]==max) max2=liczba[i+1];
-        if(liczba[i]==max) continue;
-        if(max2<max && max2<liczba[i]) max2=liczba[i];
+        if(liczba[i]<max && max2<liczba[i]) max2=liczba[i];
     }
-    cout<<max2;
-
+    cout<<max2<<endl;
     return 0;
 }

@@ -12,12 +12,10 @@ int main(){
     for(int i=0;i<n;i++){
         if(min>liczba[i]) min=liczba[i];
     }
+    if(min==liczba[0]) min2=liczba[1];
     for(int i=0;i<n;i++){
-        if(liczba[0]==min) min2=liczba[i+1];
-        if(liczba[i]==min) continue;
-        if(min2>min && min2>liczba[i]) min2=liczba[i];
+        if(min<liczba[i] && min2>liczba[i]) min2=liczba[i];
     }
-    cout<<min<<endl;
     cout<<min2;
 
     return 0;
