@@ -1,0 +1,3 @@
+1. Liczb parzystych jest: 250
+2. Liczby ktore maja 9 cyfr: 101
+3. Liczby ktore maja dlugosc od 2 do 10: 486

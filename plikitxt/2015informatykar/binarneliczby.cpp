@@ -22,6 +22,7 @@ int main(){
     }
 
     plik.close();
+    
     for(int i=0;i<n;i++){
         for(int j=0;j<binarne[i].size();j++){
             if(binarne[j][j]=='1') jedynki++;
@@ -34,7 +35,7 @@ int main(){
     fstream plikwynik;
     plikwynik.open("wyniki2015.txt",ios::out);
 
-    plikwynik<<"Liczby ktore maja wiecej zer niz jedynek: "<<wiecejzer<<endl;
+    plikwynik<<"Liczby ktore maja wiecej zer niz jedynek: "<<wiecejzer;
 
     plikwynik.close();
 
