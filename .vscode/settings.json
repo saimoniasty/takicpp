@@ -4,6 +4,7 @@
         "cstdlib": "cpp",
         "random": "cpp",
         "limits": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iosfwd": "cpp"
     }
 }
