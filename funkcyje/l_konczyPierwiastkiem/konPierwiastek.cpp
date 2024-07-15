@@ -35,7 +35,7 @@ int main(){
     float x1;
     cout<<"Sprawdz czy liczba konczy sie swoim pierwiastkiem"<<endl;
     cout<<"Podaj x: "; cin>>x;
-    x1=atoi(x.c_str());
+    x1=atof(x.c_str());
 
     if(konczy_pierwiastkiem(x,x1)) cout<<"Liczba konczy sie swoim pierwiastkiem";
     else cout<<"Liczba nie konczy sie sowim pierwiastkiem";

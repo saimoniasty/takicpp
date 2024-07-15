@@ -5,7 +5,7 @@
 #include <cstdlib>
 using namespace std;
 
-bool konczy_pierwiastkiem(string n,int n1){
+bool konczy_pierwiastkiem(string n,float n1){
     float pierwiastek=sqrt(n1);
     if(pierwiastek-int(pierwiastek)==0){
         string pierwiastek1=to_string(pierwiastek);
@@ -47,7 +47,7 @@ void wypisz_liczby(){
 int main(){
     string x,linia;
     int a=10000,nr_liczby=0;
-    int x1;
+    float x1;
     string liczby[a];
     //wypisz_liczby();
 
@@ -69,7 +69,7 @@ int main(){
 
     for(int i=0;i<a;i++){
         x=liczby[i];
-        x1=atoi(x.c_str());
+        x1=atof(x.c_str());
 
         if(konczy_pierwiastkiem(x,x1)) cout<<i+1<<". - "<<x1<<endl;
     }
