@@ -8,7 +8,7 @@ int main(){
     cout<<"Ile liczb fibonacciego chcesz wyznaczyc: "; cin>>n;
     fib[0]=1; fib[1]=1;
     cout<<setprecision(10000);
-    //cout<<fib[0]; cout<<", "<<fib[1];
+    //cout<<fib[0]<<", "<<fib[1];
     for(int i=2;i<n;i++){
         fib[i]=fib[i-1]+fib[i-2];
         //cout<<", "<<fib[i];
