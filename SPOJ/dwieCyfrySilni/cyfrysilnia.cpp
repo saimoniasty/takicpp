@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int silnia(int l){
@@ -8,17 +7,16 @@ int silnia(int l){
 }
 
 int main(){
-    int n,liczba,liczba_po_silni;
+    int n,liczba;
 
     cin>>n;
 
     for(int i=0;i<n;i++){
         cin>>liczba;
-        liczba_po_silni=silnia(liczba);
-        string l=to_string(liczba_po_silni);
-        if(l.length()==1) cout<<0<<" "<<l[0]<<endl;
-        else cout<<l[0]<<" "<<l[1]<<endl;
+        if(liczba<10){
+            cout<<silnia(liczba)/10%10<<" "<<silnia(liczba)%10<<endl;
+        }
+        else cout<<"0 0"<<endl;
     }
-
     return 0;
 }
