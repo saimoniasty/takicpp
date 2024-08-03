@@ -25,6 +25,8 @@ int main(){
 
     srand(time(NULL));
 
+    cout<<"Przed sortowaniem: "<<endl;
+
     for(int i=0;i<ile;i++){
         tablica[i]=rand()%100000+1;
         cout<<tablica[i]<<" ";
@@ -32,7 +34,7 @@ int main(){
 
     sortowanie_babelkowe(tablica,ile);
 
-    cout<<endl;
+    cout<<endl<<"Po sortowaniu: "<<endl;
 
     for(int i=0;i<ile;i++){
         cout<<tablica[i]<<" ";
