@@ -17,12 +17,12 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>liczba;
         string liczba_wyrazowo=to_string(liczba),liczba_odwrocona;
-        while(!palindrom(liczba_wyrazowo)){
+        while(palindrom(liczba_wyrazowo)==0){
             for(int i=liczba_wyrazowo.size()-1;i>=0;i--){
                 liczba_odwrocona+=liczba_wyrazowo[i];
-                liczba+=atoi(liczba_odwrocona.c_str());
-                dodawania++;
             }
+            liczba+=atoi(liczba_odwrocona.c_str());
+            dodawania++;
         }
         cout<<liczba<<" "<<dodawania<<endl;
         dodawania=0;
