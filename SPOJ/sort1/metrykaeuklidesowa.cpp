@@ -2,18 +2,6 @@
 #include <math.h>
 using namespace std;
 
-void sortowanie_babelkowe(float *tab,int n){
-    for(int i=1;i<n;i++){
-        for(int j=n-1;j>=1;j--){
-            if(tab[j]<tab[j-1]){
-                int bufor; bufor=tab[j-1];
-                tab[j-1]=tab[j];
-                tab[j]=bufor;
-            }
-        }
-    }
-}
-
 int main(){
     int t,n;
     cin>>t;
@@ -21,8 +9,7 @@ int main(){
         cin>>n;
         string nazwa[n];
         int x[n],y[n];
-        float *odleglosc;
-        odleglosc=new float [n];
+        float odleglosc[n];
         for(int i=0;i<n;i++){
             cin>>nazwa[i];
             cin>>x[i];
@@ -30,13 +17,32 @@ int main(){
             odleglosc[i]=sqrt(pow(x[i],2)+pow(y[i],2));
         }
         cout<<endl;
-        sortowanie_babelkowe(odleglosc,n-1);
-        for(int j=0;j<n;j++){
-            cout<<odleglosc[j]<<endl;
-        }
-        cout<<endl;
+        for(int i=0;i<n;i++){
+            for(int j=n-1;j>=1;j--){
+                if(odleglosc[j-1]>odleglosc[j]){
+                    float bufor; string bufor_string; int bufor_x,bufor_y;
+                    //sortowanie odleglosci
+                    bufor=odleglosc[j-1];
+                    odleglosc[j-1]=odleglosc[j];
+                    odleglosc[j]=bufor;
+                    //sortowanie nazw
+                    bufor_string=nazwa[j-1];
+                    nazwa[j-1]=nazwa[j];
+                    nazwa[j]=bufor_string;
+                    //sortowanie x i y
+                    bufor_x=x[j-1];
+                    x[j-1]=x[j];
+                    x[j]=bufor_x;
 
-        delete [] odleglosc;
+                    bufor_y=y[j-1];
+                    y[j-1]=y[j];
+                    y[j]=bufor_y;
+                }
+            }
+        }
+        for(int i=0;i<n;i++){
+            cout<<nazwa[i]<<" "<<x[i]<<" "<<y[i]<<endl;
+        }
     }
 
     return 0;
